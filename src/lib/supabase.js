@@ -14,7 +14,7 @@ export const signInWithMagicLink = async (email) => {
   const { data, error } = await supabase.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: `${window.location.origin}/auth/callback`,
+      emailRedirectTo: `https://jiaapartamentos.vercel.app/auth/callback`,
     },
   })
   return { data, error }
